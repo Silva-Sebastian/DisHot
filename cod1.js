@@ -7,13 +7,6 @@ let cierre = document.getElementById("cierreUsuario") // capturando el boton fin
 let pedidos = document.getElementById("pedidos"); //capturando el h2 pedidos
 let lista = document.getElementById("cont");
 
-const productos = [
-    { id: 1, nombre: "smoothie", precio: 1400, img: "https://www.thereciperebel.com/wp-content/uploads/2022/04/how-to-make-a-smoothie-TRR-1200-32-of-34.jpg" },
-    { id: 2, nombre: "trago", precio: 2000, img: "https://www.noticiasmontehermoso.com.ar/wp-content/uploads/2022/01/Tragos-para-la-pileta-o-la-playa.jpg" },
-    { id: 3, nombre: "entrada", precio: 2000, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXIhubBky-izY1v6TBKe5nZd4r7xVtUWmYtqr3L8uHosclVuDRkzsY5UM3C-3jBK4iuSI&usqp=CAU" },
-    { id: 4, nombre: "plato", precio: 2800, img: "https://i.pinimg.com/736x/70/dc/38/70dc38930f0f9b306bfb38798b849d4c.jpg" },
-];
-
 //si hay habitacion en el storage
 if(habitacionStorage){
   habitacion = habitacionStorage;
@@ -29,15 +22,12 @@ cierre.addEventListener("click", () => {
 localStorage.removeItem("habitacion");;
 })
 
-//funcion para agregar el pedido
-const agregar = (id) => {
-    let encontrado = productos.find((item) => item.id === id);
-    total.push(encontrado.nombre)
-    pedidos.innerHTML =`
-    <li>${total}</li>
-    `
-    //hacer un foreach para imprimir in li por cada pedido
-};
+const productos = [
+    { id: 1, nombre: "smoothie", precio: 1400, img: "https://www.thereciperebel.com/wp-content/uploads/2022/04/how-to-make-a-smoothie-TRR-1200-32-of-34.jpg" },
+    { id: 2, nombre: "trago", precio: 2000, img: "https://www.noticiasmontehermoso.com.ar/wp-content/uploads/2022/01/Tragos-para-la-pileta-o-la-playa.jpg" },
+    { id: 3, nombre: "entrada", precio: 2000, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXIhubBky-izY1v6TBKe5nZd4r7xVtUWmYtqr3L8uHosclVuDRkzsY5UM3C-3jBK4iuSI&usqp=CAU" },
+    { id: 4, nombre: "plato", precio: 2800, img: "https://i.pinimg.com/736x/70/dc/38/70dc38930f0f9b306bfb38798b849d4c.jpg" },
+];
 
 //creando el producto
 productos.forEach((item) => {
@@ -56,3 +46,14 @@ productos.forEach((item) => {
     boton.addEventListener("click", () => agregar(item.id));
 });
 
+//funcion para agregar el pedido
+const agregar = (id) => {
+    let encontrado = productos.find((item) => item.id === id);
+    total.push(encontrado.nombre)
+    for(const tot of total){
+        let li = document.createElement("li")
+        li.innerHTML = `${total}`;
+        lista.appendChild(li);
+        console.log(total);
+    }   
+};
