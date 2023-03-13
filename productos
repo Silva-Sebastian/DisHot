@@ -1,0 +1,38 @@
+<div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card">
+            <img class="fotito" src="https://cdn7.kiwilimon.com/recetaimagen/31552/36129.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">smoothie</h5>
+              <p class="card-text">$1500</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img class="fotito" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShtxeCblBJXdeuyKC8EaMV98jY337qSzE5ew&usqp=CAU" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tragos</h5>
+              <p class="card-text">$2000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img class="fotito" src="https://i.pinimg.com/originals/11/94/7f/11947f2a4ad9eb3297e610a7fb84a798.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Entradas</h5>
+              <p class="card-text">$2000</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img class="fotito" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrfMBKq9f3K3s9VM2ufZtengD2DWQeTBqhU_weNKWXo6oxWxhQ_KGRXQtXDKXdcRdbe_Y&usqp=CAU" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Plato del Dia</h5>
+              <p class="card-text">$2800</p>
+            </div>
+          </div>
+        </div>
+      </div>

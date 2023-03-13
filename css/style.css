@@ -1,3 +1,40 @@
+body{
+    background: linear-gradient(rgb(27, 121, 175), rgb(117, 110, 13))
+}
+
+header{
+    height: 600px;
+    background-image: url("https://cf.bstatic.com/xdata/images/hotel/max1280x900/310952126.jpg?k=efd52411967ff0afb85055fa72b23bab4b9795ddaf1f38e6b22fb0e1519d0c95&o=&hp=1");
+    background-size: 100% 100%;
+}
+
+h1{
+    text-align: center;
+    font-family: fantasy;
+    font-size: 150px;
+}
+
+.numHab{
+    text-align: center;
+    background-color: rgb(109, 226, 226);
+}
+
 .fotito{
-    height: 400px;
+    height: 500px;
+    width: 100%;
+}
+
+img{
+    height: 300px;
+    width: 350px;
+}
+
+div{
+    border: solid;
+    margin: 10px 33%;
+    width: 400px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bold;
+    border-radius: 5%;
 }
