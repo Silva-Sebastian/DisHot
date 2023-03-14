@@ -47,7 +47,7 @@ productos.forEach((item) => {
 });
 
 //funcion para agregar el pedido
-const agregar = (id) => {
+/*const agregar = (id) => {
     let encontrado = productos.find((item) => item.id === id);
     total.push(encontrado.nombre)
     for(const tot of total){
@@ -56,4 +56,30 @@ const agregar = (id) => {
         lista.appendChild(li);
         console.log(total);
     }   
+};*/
+const agregar = (id) => {
+    let encontrado = productos.find((item) => item.id === id);
+    total.push(encontrado.nombre);
+    pedidos.innerHTML = "";
+    total.forEach((pedido) => {
+        let li = document.createElement("li");
+        li.textContent = pedido;
+        pedidos.appendChild(li);
+    });
 };
+
+if(totalStorage){
+    total = totalStorage;
+    lista.innerHTML = `${pedidos}`;
+  }else{
+    pedidos.innerText = "No hay putos pedidos";
+  };
+
+/*if(habitacionStorage){
+habitacion = habitacionStorage;
+numeroHabitacion.innerText = `Habitacion ${habitacion}`;
+}else{
+habitacion = prompt("Ingrese su numero de habitacion");
+localStorage.setItem("habitacion", habitacion);
+numeroHabitacion.innerText = `Bienvenido su habitacion es ${habitacion}`;
+};*/
