@@ -14,7 +14,15 @@ if(habitacionStorage){
 }else{
   habitacion = prompt("Ingrese su numero de habitacion");
   localStorage.setItem("habitacion", habitacion);
-  numeroHabitacion.innerText = `Bienvenido su habitacion es ${habitacion}`;
+  Swal.fire({
+    title: `Bienvenido su habitacion es ${habitacion}`,
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  })
 };
 
 //remueve el localstorage
