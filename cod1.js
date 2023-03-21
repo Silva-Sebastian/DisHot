@@ -67,7 +67,7 @@ productos.forEach((item) => {
 };*/
 const agregar = (id) => {
     let encontrado = productos.find((item) => item.id === id);
-    total.push(encontrado.nombre);
+    total.push(encontrado.nombre + " $" + encontrado.precio);
     pedidos.innerHTML = "";
     total.forEach((pedido) => {
         let li = document.createElement("li");
