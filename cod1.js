@@ -55,16 +55,6 @@ productos.forEach((item) => {
 });
 
 //funcion para agregar el pedido
-/*const agregar = (id) => {
-    let encontrado = productos.find((item) => item.id === id);
-    total.push(encontrado.nombre)
-    for(const tot of total){
-        let li = document.createElement("li")
-        li.innerHTML = `${total}`;
-        lista.appendChild(li);
-        console.log(total);
-    }   
-};*/
 const agregar = (id) => {
     let encontrado = productos.find((item) => item.id === id);
     total.push(encontrado.nombre + " $" + encontrado.precio);
@@ -80,14 +70,5 @@ if(totalStorage){
     total = totalStorage;
     lista.innerHTML = `${pedidos}`;
   }else{
-    pedidos.innerText = "No hay putos pedidos";
+    pedidos.innerText = "No hay pedidos";
   };
-
-/*if(habitacionStorage){
-habitacion = habitacionStorage;
-numeroHabitacion.innerText = `Habitacion ${habitacion}`;
-}else{
-habitacion = prompt("Ingrese su numero de habitacion");
-localStorage.setItem("habitacion", habitacion);
-numeroHabitacion.innerText = `Bienvenido su habitacion es ${habitacion}`;
-};*/
